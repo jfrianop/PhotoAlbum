@@ -1,0 +1,54 @@
+body{
+    font-family: 'Shadows Into Light', cursive, sans-serif;
+}
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 150px;
+    gap:30px;
+    padding: 10px 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.photo{
+    position: relative;
+    display:flex;    
+    justify-content: center;
+    align-items: center;
+    border-radius:  7px;
+    box-shadow:5px 5px 10px rgba(84,84,74,0.25);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(229,229,226,1) 100%);
+   
+}
+.photo .icon{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color:#ff0000;
+}
+.big{    
+    grid-area: 1/ 1 / 3 /3;
+}
+.photo:hover{
+    transition-timing-function: ease-in-out;
+    transition-duration: 1s;
+}
+.even:hover {    
+    transform: rotate(20deg);
+}
+.odd:hover {    
+    transform: rotate(-20deg);
+}
+@media(min-width:768px){
+    .container{
+        width: 768px;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media(min-width:991px){
+    .container{
+        width: 991px;
+        grid-template-columns: repeat(4,1fr);
+    }
+}
